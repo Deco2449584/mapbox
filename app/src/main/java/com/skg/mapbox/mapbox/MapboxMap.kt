@@ -36,7 +36,8 @@ fun MapBoxMap(
     AndroidView(
         factory = {
             MapView(it).also { mapView ->
-                mapView.getMapboxMap().loadStyleUri(Style.DARK)
+                val mapboxMap = mapView.mapboxMap
+                mapboxMap.loadStyle(Style.DARK)
                 val annotationApi = mapView.annotations
                 pointAnnotationManager = annotationApi.createPointAnnotationManager()
             }
@@ -50,7 +51,7 @@ fun MapBoxMap(
                         .withIconImage(marker)
 
                     it.create(pointAnnotationOptions)
-                    mapView.getMapboxMap()
+                    mapView.mapboxMap
                         .flyTo(CameraOptions.Builder().zoom(16.0).center(point).build())
                 }
             }
