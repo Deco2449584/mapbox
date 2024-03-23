@@ -13,7 +13,7 @@ fun MapScreen() {
         modifier = Modifier.fillMaxSize(),
     ) {
         MapBoxMap(
-            point = Point.fromLngLat(-0.6333, 35.6971),
+            point = Point.fromLngLat(-74.20330325767281, 4.638675493693809), //4.638675493693809, -74.20330325767281
             modifier = Modifier
                 .fillMaxSize()
         )

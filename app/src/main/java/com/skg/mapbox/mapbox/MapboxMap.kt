@@ -28,7 +28,7 @@ fun MapBoxMap(
 ) {
     val context = LocalContext.current
     val marker = remember(context) {
-        context.getDrawable(R.drawable.baseline_control_point_24)!!.toBitmap()
+        context.getDrawable(R.drawable.baseline_brightness_1_24)!!.toBitmap()
     }
     var pointAnnotationManager: PointAnnotationManager? by remember {
         mutableStateOf(null)
